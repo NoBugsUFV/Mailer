@@ -2,6 +2,7 @@
     namespace DB;
 
     class Sql extends PDO{
+        
         const HOST = '';
         const USER = '';
         const PASSWORD = '';
