@@ -1,7 +1,7 @@
 <?php
-    namespace DB;
+    namespace Api\DB;
 
-    class Sql extends PDO{
+    class Sql{
         
         const HOST = '';
         const USER = '';
@@ -22,12 +22,13 @@
 
         */
 
-        public function Sql(){
-            $this->conn = new PDO(
+        public function __construct(){
+            echo "FOI!";
+            /* $this->conn = new \PDO(
                 "mysql:dbname=".Sql::DBNAME.";host=".Sql::HOSTNAME, 
                 Sql::USERNAME,
                 Sql::PASSWORD
-            );
+            ); */
         }
 
         private function bindParam($statement, $key, $value){
@@ -51,5 +52,5 @@
             $statement = $this->query($rawQuery, $parameters);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } 
-    }
+    }   
 ?>
