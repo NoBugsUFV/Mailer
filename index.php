@@ -1,6 +1,11 @@
 <?php
     require_once "vendor/autoload.php";
-    use Api\DB\Sql;
+    
+    $app = new \Slim\App();
 
-    $e = new Sql();
+    $app->get('/', function ($req, $res) {
+        $res->write("Teste!");
+    });
+
+    $app->run();
 ?>
