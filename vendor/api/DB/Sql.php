@@ -3,10 +3,10 @@
 
     class Sql{
         
-        const HOST = '';
-        const USER = '';
+        const HOST = 'localhost';
+        const USER = 'root';
         const PASSWORD = '';
-        const DBNAME =  '';
+        const DBNAME =  'materiais_leads';
 
         private $conn;
 
@@ -23,12 +23,11 @@
         */
 
         public function __construct(){
-            echo "FOI!";
-            /* $this->conn = new \PDO(
-                "mysql:dbname=".Sql::DBNAME.";host=".Sql::HOSTNAME, 
-                Sql::USERNAME,
+            $this->conn = new \PDO(
+                "mysql:dbname=".Sql::DBNAME.";host=".Sql::HOST, 
+                Sql::USER,
                 Sql::PASSWORD
-            ); */
+            );
         }
 
         private function bindParam($statement, $key, $value){
@@ -50,7 +49,7 @@
 
         public function select($rawQuery, $parameters=[]){
             $statement = $this->query($rawQuery, $parameters);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
         } 
     }   
 ?>
