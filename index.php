@@ -3,9 +3,12 @@
     
     $app = new \Slim\App();
 
+    $app->get('/templates', function ($req, $res) {
+        $res->write("Templates");
+    });
 
-    $app->get('/', function ($req, $res) {
-        $res->write("Teste!");
+    $app->get('/recipients', function ($req, $res) {
+        $res->write("Endereços");
     });
 
     $app->run();
