@@ -1,0 +1,10 @@
+@font-face{
+    font-family: "Gotham";
+    src: url("../../assets/fonts/Gotham-Black.otf"),
+         url("../../assets/fonts/GothamBook.ttf");
+}
+
+body{
+    background-color: #F3F3F3;
+    display: block;
+}
