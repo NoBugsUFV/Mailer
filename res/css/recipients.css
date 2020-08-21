@@ -57,3 +57,9 @@ a:link{
     margin-left: auto;
     margin-right: 200px;
 }
+
+#deleteIcon{
+    width: 22px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
