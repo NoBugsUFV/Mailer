@@ -1,5 +1,6 @@
 {
     "name": "thiag/php-slim",
+    "description": "Sistema de envio simples de emails personalizados.",
     "authors": [
         {
             "name": "Thiago",
