@@ -1,7 +1,7 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>
     <div class="pageContent">
         <div class="buttonArea">
-            <a href="#">
+            <a href="/templates/new">
                 <div class="actionButton">
                     <h6 class="actionButtonText">Novo Template</h6>
                 </div>

@@ -17,7 +17,6 @@
     $app = new \Slim\App($c);
 
     $app->get('/login', function(){
-
         $page = new Page([
             'header'=> false,
             'footer' => false,
@@ -30,9 +29,19 @@
         $page->setTpl('templates');
     });
 
-    $app->get('/recipients', function ($req, $res) {
+    $app->get('/recipients', function () {
         $page = new Page();
         $page->setTpl('recipients');
+    });
+
+    $app->get('/recipients/new', function () {
+        $page = new Page();
+        $page->setTpl('newRecipient');
+    });
+
+    $app->get('/templates/new', function () {
+        $page = new Page();
+        $page->setTpl('uploadFile');
     });
 
     $app->run();
