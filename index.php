@@ -3,6 +3,10 @@
     
     $app = new \Slim\App();
 
+    /* $app->get('/login', function(){
+
+    }); */
+
     $app->get('/templates', function ($req, $res) {
         $res->write("Templates");
     });
