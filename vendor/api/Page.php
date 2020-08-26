@@ -2,7 +2,7 @@
 
     namespace Api;
 
-    use Rain\tpl;
+    use Rain\Tpl;
 
     class Page{
         private $tpl;
@@ -24,12 +24,12 @@
 
         //A função abaixo configura o rain Tpl
 
-        private function tplConfig($options, $tplDir){
+        private function tplConfig($options = [], $tpl_dir){
             $this->options = array_merge($this->defaults, $options);
 
             $config = [
-                "tplDir" => $_SERVER["DOCUMENT_ROOT"].$tplDir,
-                "cacheDir" => $_SERVER["DOCUMENT_ROOT"]."/views-cache/"
+                "tpl_dir" => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
+                "cache_dir" => $_SERVER["DOCUMENT_ROOT"]."/views-cache/"
             ];
 
             Tpl::configure($config);
@@ -37,9 +37,9 @@
 
         //O construtor chama a função que configura o rain e renderiza o cabeçalho da página.
 
-        public function __construct($options = [], $tplDir="/views/"){
+        public function __construct($options = [], $tpl_dir='/views/'){
             
-            tplConfig($options, $tplDir);
+            $this->tplConfig($options, $tpl_dir);
 
             $this->tpl = new Tpl;
 
