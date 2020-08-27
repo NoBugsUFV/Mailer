@@ -7,7 +7,7 @@
 </head>
 <body>
     <nav id="menu">
-        <img src="../res/assets/img/logo.png" alt="logo" id="logo">
+        <a href="/"><img src="../res/assets/img/logo.png" alt="logo" id="logo"></a>
         <div class="pages">
             <a href="/templates" class="page" id="fristPage">Templates</a>
             <a href="/recipients" class="page" id="page">Endereços</a>

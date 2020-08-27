@@ -1,11 +1,9 @@
 @font-face{
-    font-family: 'Gotham';
-    src: url('../assets/fonts/Gotham-Black.otf')format("otf"),
-         url('../assets/fonts/GothamBook.ttf')format("ttf");
-    font-weight: normal;
-    font-style: normal;
-         
+    font-family: "Gotham";
+    src: url("../assets/fonts/Gotham-Black.otf"),
+         url("../assets/fonts/GothamBook.ttf");
 }
+/* ------------------------------------------------------------- */
 
 body{
     background-color: #F3F3F3;
@@ -71,6 +69,32 @@ a:link{
     margin-left: 5%;
     margin-top: 3%;
 }
+
+/* ----------------------- Footer ----------------------------- */
+
+footer{
+    background-color: #0075c9;
+    height: 150px;
+    padding-top: 3%;
+    margin:0px !important;
+}
+#logoNB{
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#credits{
+    text-align: center;
+    font-size: 13;
+    font-family: Gotham;
+    color: #EFEFEF;
+}
+
 /* ----------------------- Login ------------------------------ */
 
 .loginPageContent{
@@ -102,7 +126,7 @@ a:link{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.blueTitle{
+#loginBlueTitle{
     text-align: center;
     color: #0075c9;
     font-family: Gotham;
@@ -157,10 +181,10 @@ a:link{
 
     box-shadow: rgba(0, 0, 0, 0.36) 2px 2px 10px;
 
-    font-family: Gotham black;
+    font-family: Gotham;
 }
 button:hover{
-    background-color:#00518a ;
+    background-color:#00518a;
 }
 
 #forgotPassword{
@@ -224,4 +248,195 @@ button:hover{
     height: 50px;
     margin-left: auto;
     margin-right: 200px;
+}
+/* --------------------- Recipients ------------------------ */
+
+
+
+.recipientsPageContent{
+    margin-bottom: 100px;
+}
+.recipientsActionButton{
+    background-color: #0075c9;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.recipients{
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    
+}
+.recipient{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #d8d8d8d8;
+    border-radius: 5px;
+    border: solid 1px #0075c96a;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.recipient h6{
+    font-family: Gotham;
+    font-size: 14px;
+}
+
+.buttonArea{
+    width: 160px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+#deleteIcon{
+    width: 22px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
+
+/* ----------------------- New Recipient ------------------------- */
+
+.newRecipientPageContent{
+    margin-bottom: 100px;
+}
+.formRecipientBox{
+    width: 700px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+#formRecipients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.newRecipientBlueTitle{
+    color: #0075c9;
+    font-family: Gotham;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: auto;
+}
+.recipientField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.recipientLabel{
+    font-family: Gotham;
+    font-size: medium;
+    margin: 3px;
+    
+}
+.recipientInput{
+    width: 500px;
+    height: 40px;
+    border: solid 1.5px #0075c9;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+
+#lastInput{
+    margin-bottom: 50px;
+}
+.addRecipientButton{
+    margin-top: 30px;
+    width: 250px;
+    height: 50px;
+
+    border: none;
+    border-radius: 6px;
+
+    color: #D7D7D7;
+    font-family: Gotham;
+    font-size: medium;
+    background-color: #0075c9;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.36) 2px 2px 10px;
+}
+
+/* ------------------- upload Template ----------------------- */
+
+.uploadPageContent{
+    margin-bottom: 108px;
+    margin-top: 100px;
+}
+
+.uploadBlueTitle{
+    color: #0075c9;
+    font-family: Gotham;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 70px;
+}
+.usefullArea{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.uploadForm{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#confirmButton{
+    width: 50%;
+    background-color: #D7D7D7;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: Gotham;
+    align-self: center;
+    margin-top: 50px;
+    transition-duration: 0.3s;
+}
+
+#confirmButton:hover{
+    background-color: #707070;
+}
+
+.uploadInput{
+    color: black;
+
+}
+
+input[type='file'] {
+    display: none
+  }
+  
+  /* Aparência que terá o seletor de arquivo */
+.fileLabel {
+    background-color: #0075c9;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Gotham;
+    cursor: pointer;
+    margin: 10px;
+    padding: 20px 20px;
+    transition-duration: 0.3s;
+}
+.fileLabel:hover{
+    background-color:#00518a;
 }

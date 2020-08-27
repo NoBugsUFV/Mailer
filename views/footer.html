@@ -4,6 +4,4 @@
     </footer>
 
 </body>
-    <link rel="stylesheet" href="../res/css/footer.css">
-    <link rel="stylesheet" href="../res/css/global.css">
 </html>

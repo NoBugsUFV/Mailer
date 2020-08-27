@@ -1,8 +1,8 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>
-    <section class="pageContent">
+    <section class="recipientsPageContent">
         <div class="buttonArea">
             <a href="/recipients/new">
-                <div class="actionButton">
+                <div class="recipientsActionButton">
                     <h6 class="actionButtonText">Novo Endereço</h6>
                 </div>
             </a>

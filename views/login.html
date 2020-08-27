@@ -2,14 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>NB Mailer - Login</title>
-    <link rel="stylesheet" href="../res/css/style.css">
+    <title>NB Mailer</title>
+    <link rel="stylesheet" href="../res/css/global.css">
+    <link rel="stylesheet" href="../res/css/login.css">
 </head>
 <body>
     <div class="loginPageContent">
-        <img src="../../res/assets/img/logo.png" alt="logo" id="loginLogo">
+        <img src="../res/assets/img/logo.png" alt="logo" id="loginLogo">
         <div class="loginBox">
-            <h2 class="blueTitle">Faça login</h2>
+            <h2 id="loginBlueTitle">Faça login</h2>
             
             <form action="" method="post" id="loginForm">
                 <div class="loginField">
