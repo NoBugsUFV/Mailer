@@ -1,7 +1,7 @@
 @font-face{
     font-family: "Gotham";
-    src: url("../../assets/fonts/Gotham-Black.otf"),
-         url("../../assets/fonts/GothamBook.ttf");
+    src: url("../assets/fonts/Gotham-Black.otf"),
+         url("../assets/fonts/GothamBook.ttf");
 }
 
 body{

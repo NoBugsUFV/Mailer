@@ -1,7 +1,7 @@
-
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
     <section class="pageContent">
         <div class="buttonArea">
-            <a href="#">
+            <a href="/recipients/new">
                 <div class="actionButton">
                     <h6 class="actionButtonText">Novo Endereço</h6>
                 </div>
