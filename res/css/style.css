@@ -1,0 +1,227 @@
+@font-face{
+    font-family: 'Gotham';
+    src: url('../assets/fonts/Gotham-Black.otf')format("otf"),
+         url('../assets/fonts/GothamBook.ttf')format("ttf");
+    font-weight: normal;
+    font-style: normal;
+         
+}
+
+body{
+    background-color: #F3F3F3;
+    display: block;
+    margin: 0;
+}
+
+a:link{
+    font-family: Gotham;
+    text-decoration: none;
+}
+
+
+/* ----------------------- Header ----------------------------- */
+
+#menu{
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+
+    width:150px;
+    height:35.77px;
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    justify-content: space-between;
+    align-items: center;
+}
+.page{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 18px;
+    font-family: Gotham;
+    color: #707070;
+}
+
+.page:link{
+    text-decoration: none;
+}
+
+#fristPage{
+    padding-left: 30%;
+}
+#page{
+    font-size: 18px;
+    font-family: Gotham;
+    color: #707070;
+}
+
+#hello{
+    font-family: Gotham;
+    color: black;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+/* ----------------------- Login ------------------------------ */
+
+.loginPageContent{
+    margin-top: 70px;
+}
+
+#loginLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto; 
+}
+
+.loginBox{
+    background-color: #d7d7d757;
+    border-radius: 7px;
+
+    width: 805px;
+    height: 410px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.blueTitle{
+    text-align: center;
+    color: #0075c9;
+    font-family: Gotham;
+    font-size: 32px;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.loginField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.loginField:last-of-type{
+    margin-top: 20px;
+}
+
+.loginLabel{
+    font-family: Gotham;
+    font-size: medium;
+    margin: 3px;    
+}
+.loginInput{
+    width: 500px;
+    height: 40px;
+    border: solid 1.5px #0075c9;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+.submitButtonLogin{
+    margin-top: 30px;
+    width: 250px;
+    height: 50px;
+
+    border: none;
+    border-radius: 6px;
+
+    color: #D7D7D7;
+    font-family: Gotham;
+    font-size: medium;
+    background-color: #0075c9;
+    transition-duration: 0.3s;
+
+    box-shadow: rgba(0, 0, 0, 0.36) 2px 2px 10px;
+
+    font-family: Gotham black;
+}
+button:hover{
+    background-color:#00518a ;
+}
+
+#forgotPassword{
+    font-family: Gotham;
+    font-size: 13px;
+    color: black;
+}
+/* ----------------------- Templates -------------------------- */
+
+.templatesPageContent{
+    margin: 0px auto 100px auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.templatesGrid{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.template{
+    background-color: #d8d8d8;
+    width: 350px;
+    height: 65px;
+    border-radius: 5px;
+    border: solid 1px #0075c96a;
+    box-shadow: #1616161a 1.5px 1.5px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.templateText{
+    font-family: Gotham;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+.actionButton{
+    background-color: #0075c9;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.actionButtonText{
+    font-family: Gotham;
+    color: #f3f3f3;
+    font-size: 14px;
+    text-align: center;
+}
+.buttonArea{
+    width: 160px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 200px;
+}

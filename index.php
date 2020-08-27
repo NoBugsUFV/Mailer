@@ -24,6 +24,11 @@
         $page->setTpl('login');
     });
 
+    $app->get('/', function () {
+        $page = new Page();
+        $page->setTpl('templates');
+    });
+
     $app->get('/templates', function () {
         $page = new Page();
         $page->setTpl('templates');

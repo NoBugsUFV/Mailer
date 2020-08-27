@@ -1,8 +1,8 @@
-.pageContent{
+.loginPageContent{
     margin-top: 70px;
 }
 
-#logo{
+#loginLogo{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -33,7 +33,7 @@
     font-family: Gotham;
     font-size: 32px;
 }
-form{
+#loginForm{
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -42,23 +42,23 @@ form{
 
     margin-top: 30px;
 }
-.field{
+.loginField{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.field:last-of-type{
+.loginField:last-of-type{
     margin-top: 20px;
 }
 
 .label{
-    font-family: Gotham Black;
+    font-family: Gotham;
     font-size: medium;
     margin: 3px;
     
 }
-input{
+.loginInput{
     width: 500px;
     height: 40px;
     border: solid 1.5px #0075c9;
@@ -66,7 +66,7 @@ input{
     padding-left: 15px;
 }
 
-button{
+.submitButtonLogin{
     margin-top: 30px;
     width: 250px;
     height: 50px;

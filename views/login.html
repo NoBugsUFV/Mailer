@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>NB Mailer - Login</title>
-    <link rel="stylesheet" href="../../res/css/global.css">
-    <link rel="stylesheet" href="../../res/css/login.css">
+    <link rel="stylesheet" href="../res/css/style.css">
 </head>
 <body>
-    <div class="pageContent">
-        <img src="../../res/assets/img/logo.png" alt="logo" id="logo">
+    <div class="loginPageContent">
+        <img src="../../res/assets/img/logo.png" alt="logo" id="loginLogo">
         <div class="loginBox">
             <h2 class="blueTitle">Faça login</h2>
             
-            <form action="" method="post">
-                <div class="field">
-                    <label for="email"><h6 class="label">Email:</h6></label>
-                    <input type="text" name="email" id="email" required>
+            <form action="" method="post" id="loginForm">
+                <div class="loginField">
+                    <label for="email"><h6 class="loginLabel">Email:</h6></label>
+                    <input type="text" name="email" class="loginInput" required>
                 </div>
 
-                <div class="field">
-                    <label for="password"><h6 class="label">Senha:</h6></label>
-                    <input type="password" name="password" id="password" required>
+                <div class="loginField">
+                    <label for="password"><h6 class="loginLabel">Senha:</h6></label>
+                    <input type="password" name="password" class="loginInput" required>
                 </div>
                 
-                <button class="submitButton">Entrar</button>
+                <button class="submitButtonLogin">Entrar</button>
 
                 <a href="#"><h6 id="forgotPassword" >Esqueci minha senha</h6></a>
             </form>
