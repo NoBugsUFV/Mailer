@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>NB Mailer</title>
-    <link rel="stylesheet" href="../res/css/global.css">
-    <link rel="stylesheet" href="../res/css/login.css">
+    <link rel="stylesheet" href="../res/css/style.css">
 </head>
 <body>
     <div class="loginPageContent">

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>NB Mailer</title>
+    <link rel="shortcut icon" href="../res/assets/img/icon.ico"/>
     <link rel="stylesheet" href="../res/css/style.css">
 </head>
 <body>
