@@ -12,6 +12,7 @@
         <div class="pages">
             <a href="/templates" class="page" id="fristPage">Templates</a>
             <a href="/recipients" class="page" id="page">Endereços</a>
+            <a href="/logout">Logout</a>
         </div>
     </nav>
-    <h1 id="hello">Olá, Thiago!</h1>
+    <h1 id="hello">Olá, No Bugger!</h1>

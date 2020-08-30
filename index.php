@@ -37,6 +37,12 @@
 	    exit;
     });
 
+    $app->get('/logout', function(){
+        User::logout();
+        header("Location: /login");
+        exit;
+    });
+
     $app->get('/', function () {
         User::verifyLogin();
         $page = new Page();
