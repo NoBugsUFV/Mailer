@@ -11,16 +11,21 @@ class User extends Model{
         $sql = new Sql();
 
         // Confere email
-        $results = $sql->select("Fazer a query que busca o email passado como parâmetro e fazer o bind");
+        $results = $sql->select("SELECT * FROM users WHERE emailUser = :email", [
+            ':email'=> $email
+        ]);
+
         if(count($results) === 0){
             throw new \Exception("Email ou senha inválidos");
         }
+        echo "<script>alert('passou email');</script>";
         $data = $results[0];
+
         //Confere senha
-        if(password_verify($password, $data["password"]) === true){
+        if($password === $data["passwordUser"]){
             $user = new User();
             $user->setData($data);
-            $_SESSION[User::SESSION] = $user->getValues();
+            $_SESSION["user"] = $user->getValues();
             return $user;
         }else{
             throw new \Exception ("Email ou senha inválidos");
@@ -29,17 +34,17 @@ class User extends Model{
 
     public static function verifyLogin(){
         if(
-            !isset($_SESSION[User::SESSION]) ||
-            !$_SESSION[User::SESSION] ||
-            !(int)$_SESSION[User::SESSION]["iduser"] > 0
+            !isset($_SESSION["user"]) ||
+            !$_SESSION["user"] ||
+            !(int)$_SESSION["user"]["idUser"] > 0
         ){
-            header('location: /admin/login');
+            header('location: /login');
             exit;
         }
     }
 
     public static function logout(){
-        $_SESSION[User::SESSION] = NULL;
+        $_SESSION["user"] = NULL;
     }
 
     public static function listAll(){

@@ -6,7 +6,7 @@
         const HOST = 'localhost';
         const USER = 'root';
         const PASSWORD = '';
-        const DBNAME =  'materiais_leads';
+        const DBNAME =  'mailer';
 
         private $conn;
 
@@ -49,7 +49,7 @@
 
         public function select($rawQuery, $parameters=[]){
             $statement = $this->query($rawQuery, $parameters);
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $statement->fetchAll();
         } 
     }   
 ?>

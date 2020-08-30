@@ -1,0 +1,8 @@
+CREATE DATABASE mailer;
+
+CREATE TABLE users(
+    idUser INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nameUser VARCHAR(35) NOT NULL,
+    emailUser VARCHAR(50) NOT NULL,
+    passwordUser VARCHAR(35) NOT NULL
+);

@@ -21,6 +21,8 @@ class Model{
     }
 
     public function setData($data=[]){
+        echo "<script>alert('passou aqui set data');</script>";
+        echo(var_dump($data));
         foreach ($data as $key => $value){
             $this->{"set".$key}($value);
         }

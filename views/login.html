@@ -11,7 +11,7 @@
         <div class="loginBox">
             <h2 id="loginBlueTitle">Faça login</h2>
             
-            <form action="" method="post" id="loginForm">
+            <form action="/login" method="POST" id="loginForm">
                 <div class="loginField">
                     <label for="email"><h6 class="loginLabel">Email:</h6></label>
                     <input type="text" name="email" class="loginInput" required>
@@ -22,7 +22,7 @@
                     <input type="password" name="password" class="loginInput" required>
                 </div>
                 
-                <button class="submitButtonLogin">Entrar</button>
+                <button type="submit" class="submitButtonLogin">Entrar</button>
 
                 <a href="#"><h6 id="forgotPassword" >Esqueci minha senha</h6></a>
             </form>
