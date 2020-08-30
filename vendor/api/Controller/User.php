@@ -7,6 +7,8 @@ use Api\Model;
 
 class User extends Model{
 
+    const SESSION = "User";
+
     public static function login($email, $password){
         $sql = new Sql();
 
@@ -18,14 +20,13 @@ class User extends Model{
         if(count($results) === 0){
             throw new \Exception("Email ou senha inválidos");
         }
-        echo "<script>alert('passou email');</script>";
         $data = $results[0];
 
         //Confere senha
         if($password === $data["passwordUser"]){
             $user = new User();
             $user->setData($data);
-            $_SESSION["user"] = $user->getValues();
+            $_SESSION[User::SESSION] = $user->getValues();
             return $user;
         }else{
             throw new \Exception ("Email ou senha inválidos");
@@ -34,9 +35,9 @@ class User extends Model{
 
     public static function verifyLogin(){
         if(
-            !isset($_SESSION["user"]) ||
-            !$_SESSION["user"] ||
-            !(int)$_SESSION["user"]["idUser"] > 0
+            !isset($_SESSION[User::SESSION]) ||
+            !$_SESSION[User::SESSION] ||
+            !(int)$_SESSION[User::SESSION]["idUser"] > 0
         ){
             header('location: /login');
             exit;
@@ -44,7 +45,7 @@ class User extends Model{
     }
 
     public static function logout(){
-        $_SESSION["user"] = NULL;
+        $_SESSION[User::SESSION] = NULL;
     }
 
     public static function listAll(){

@@ -32,7 +32,8 @@
     
     $app->post('/login', function(){
         User::login($_POST["email"], $_POST["password"]);
-	    header("Location: /");
+        $_SESSION["user"] = "teste";
+	    header("Location: /templates");
 	    exit;
     });
 
