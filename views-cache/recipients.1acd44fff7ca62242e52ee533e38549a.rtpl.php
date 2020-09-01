@@ -14,10 +14,10 @@
                 <h6 class="recipientEmail"><?php echo htmlspecialchars( $value1["emailRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
                 <h6 class="recipientTag"><?php echo htmlspecialchars( $value1["tagRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
                 <div class="actions">
-                    <a href="#">
+                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                         <img src="../../res/assets/img/settings.svg" alt="config">
                     </a>
-                    <a href="#">
+                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete">
                         <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
                     </a>
                 </div>

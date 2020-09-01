@@ -26,12 +26,24 @@
  	    exit;
     });
 
-    $app->get('/recipients/:id', function($id){
+    $app->get("/recipients/{idRecipient}", function($args){
+
         User::verifyLogin();
+        $idRecipient = $args["idRecipient"];
         $recipient = new Recipient();
-        $recipient->getById((int)$id);
+        $recipient->getById((int)$idRecipient);
         $page = new Page();
-        $page->setTpl('recipient', [
+        $page->setTpl("recipient", [
             'recipient'=>$recipient->getValues()
         ]);
+    });
+
+    $app->get("/recipients/{idRecipient}/delete", function($req, $res, $args){
+        $idRecipient = $args["idRecipient"];
+        User::verifyLogin();
+        $recipient = new Recipient();
+        $recipient->getById($idRecipient);
+        $recipient->delete();
+        header("Location: /recipients");
+        exit;
     });

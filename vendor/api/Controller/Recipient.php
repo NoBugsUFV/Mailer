@@ -45,7 +45,10 @@ class Recipient extends Model{
         //Implementar
     }
 
-    public function delete($id){
-        //Implementar
+    public function delete(){
+        $sql = new Sql();
+        $sql->query("DELETE FROM recipients WHERE idRecipient = :id", [
+            ":id"=>$this->getidRecipient()
+        ]);
     }
 }

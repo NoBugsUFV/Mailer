@@ -8,46 +8,13 @@
             </a>
         </div>
         <div class="templatesGrid">
+            <?php $counter1=-1;  if( isset($templates) && ( is_array($templates) || $templates instanceof Traversable ) && sizeof($templates) ) foreach( $templates as $key1 => $value1 ){ $counter1++; ?>
             <a href="#">
                 <div class="template" href="/templates/:id">
                     <h6 class="templateText">Newsletter Janeiro</h6>
                 </div>
             </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Fevereiro</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Março</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Abril</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Maio</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Junho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Julho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Agosto</h6>
-                </div>
-            </a>
+            <?php } ?>
         </div>
     </div>
     
