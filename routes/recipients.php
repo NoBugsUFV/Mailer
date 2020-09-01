@@ -6,8 +6,9 @@
 
     $app->get('/recipients', function () {
         User::verifyLogin();
+        $recipients = Recipient::listAll();
         $page = new Page();
-        $page->setTpl('recipients');
+        $page->setTpl('recipients', ['recipients'=>Recipient::checkList($recipients)]);
     });
 
     $app->get('/recipients/new', function () {

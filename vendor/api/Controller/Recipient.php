@@ -12,6 +12,15 @@ class Recipient extends Model{
         return $sql->select("SELECT * FROM recipients ORDER BY idRecipient");
     }
 
+    public static function checkList($recipients){
+		foreach ($recipients as &$recipient) {	
+			$r = new Recipient();
+			$r->setData($recipient);
+			$recipient = $r->getValues();
+		}
+		return $recipients;
+	}
+
     public function getById($id){
         $sql = new Sql();
 
@@ -32,5 +41,11 @@ class Recipient extends Model{
         $this->setData();
     }
 
-    
+    public function update($id){
+        //Implementar
+    }
+
+    public function delete($id){
+        //Implementar
+    }
 }
