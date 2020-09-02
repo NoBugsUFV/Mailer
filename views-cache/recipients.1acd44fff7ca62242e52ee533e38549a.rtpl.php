@@ -1,91 +1,27 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>
-    <section class="pageContent">
+    <section class="recipientsPageContent">
         <div class="buttonArea">
             <a href="/recipients/new">
-                <div class="actionButton">
+                <div class="recipientsActionButton">
                     <h6 class="actionButtonText">Novo Endereço</h6>
                 </div>
             </a>
         </div>
         <div class="recipients">
+            <?php $counter1=-1;  if( isset($recipients) && ( is_array($recipients) || $recipients instanceof Traversable ) && sizeof($recipients) ) foreach( $recipients as $key1 => $value1 ){ $counter1++; ?>
             <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
+                <h6 class="recipientName"><?php echo htmlspecialchars( $value1["nameRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
+                <h6 class="recipientEmail"><?php echo htmlspecialchars( $value1["emailRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
+                <h6 class="recipientTag"><?php echo htmlspecialchars( $value1["tagRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
                 <div class="actions">
-                    <a href="#">
+                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                         <img src="../../res/assets/img/settings.svg" alt="config">
                     </a>
-                    <a href="#">
+                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete">
                         <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
                     </a>
                 </div>
             </div>
-            <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
-                <div class="actions">
-                    <a href="#">
-                        <img src="../../res/assets/img/settings.svg" alt="config">
-                    </a>
-                    <a href="#">
-                        <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
-                    </a>
-                </div>
-            </div>
-            <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
-                <div class="actions">
-                    <a href="#">
-                        <img src="../../res/assets/img/settings.svg" alt="config">
-                    </a>
-                    <a href="#">
-                        <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
-                    </a>
-                </div>
-            </div>
-            <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
-                <div class="actions">
-                    <a href="#">
-                        <img src="../../res/assets/img/settings.svg" alt="config">
-                    </a>
-                    <a href="#">
-                        <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
-                    </a>
-                </div>
-            </div>
-            <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
-                <div class="actions">
-                    <a href="#">
-                        <img src="../../res/assets/img/settings.svg" alt="config">
-                    </a>
-                    <a href="#">
-                        <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
-                    </a>
-                </div>
-            </div>
-            <div class="recipient">
-                <h6 class="recipientName">Thiago Ferreira</h6>
-                <h6 class="recipientEmail">thiago.peixoto@nobugs.com.br</h6>
-                <h6 class="recipientTag">No Bugs</h6>
-                <div class="actions">
-                    <a href="#">
-                        <img src="../../res/assets/img/settings.svg" alt="config">
-                    </a>
-                    <a href="#">
-                        <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
-                    </a>
-                </div>
-            </div>
-            
+            <?php } ?>
         </div>
     </section>

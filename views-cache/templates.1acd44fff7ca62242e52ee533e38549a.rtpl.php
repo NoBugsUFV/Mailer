@@ -1,5 +1,5 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>
-    <div class="pageContent">
+    <div class="templatesPageContent">
         <div class="buttonArea">
             <a href="/templates/new">
                 <div class="actionButton">
@@ -8,6 +8,7 @@
             </a>
         </div>
         <div class="templatesGrid">
+
             <a href="#">
                 <div class="template" href="/templates/:id">
                     <h6 class="templateText">Newsletter Janeiro</h6>

@@ -1,48 +1,18 @@
 <?php
+    session_start();
+
     require_once "vendor/autoload.php";
-
+    require_once "config/config.php";
+    
+    use\Slim\App;
     use Api\Page;
+    use Api\Controller\User;
 
-    //-------- Configuração de produção ---------
+    $app = new App($c);
 
-    $configuration = [
-        'settings' => [
-            'displayErrorDetails' => true,
-        ],
-    ];
-    $c = new \Slim\Container($configuration);
-
-    //-------------------------------------------
-
-    $app = new \Slim\App($c);
-
-    $app->get('/login', function(){
-        $page = new Page([
-            'header'=> false,
-            'footer' => false,
-        ]);
-        $page->setTpl('login');
-    });
-
-    $app->get('/templates', function () {
-        $page = new Page();
-        $page->setTpl('templates');
-    });
-
-    $app->get('/recipients', function () {
-        $page = new Page();
-        $page->setTpl('recipients');
-    });
-
-    $app->get('/recipients/new', function () {
-        $page = new Page();
-        $page->setTpl('newRecipient');
-    });
-
-    $app->get('/templates/new', function () {
-        $page = new Page();
-        $page->setTpl('uploadFile');
-    });
+    require_once "routes/login.php";
+    require_once "routes/templates.php";
+    require_once "routes/recipients.php";
 
     $app->run();
 ?>
