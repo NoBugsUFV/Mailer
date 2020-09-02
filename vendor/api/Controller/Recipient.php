@@ -37,12 +37,20 @@ class Recipient extends Model{
             ':nome'=>$this->getnameRecipient(),
             ':email'=> $this->getemailRecipient(),
             ':tag'=> $this->gettagRecipient()
-        ]);
+        ]); 
         $this->setData();
     }
 
     public function update($id){
-        //Implementar
+        $sql = new Sql();
+
+        $sql->query("UPDATE recipients SET nameRecipient = :nome, emailRecipient =  :email, tagRecipient = :tag WHERE idRecipient = :id", [
+            ':nome'=>$this->getnameRecipient(),
+            ':email'=> $this->getemailRecipient(),
+            ':tag'=> $this->gettagRecipient(),
+            ':id'=> $id
+        ]);
+        $this->setData();
     }
 
     public function delete(){

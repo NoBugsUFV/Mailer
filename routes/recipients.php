@@ -26,8 +26,7 @@
  	    exit;
     });
 
-    $app->get("/recipients/{idRecipient}", function($args){
-
+    $app->get("/recipients/{idRecipient}", function($req, $res, $args){
         User::verifyLogin();
         $idRecipient = $args["idRecipient"];
         $recipient = new Recipient();
@@ -36,6 +35,17 @@
         $page->setTpl("recipient", [
             'recipient'=>$recipient->getValues()
         ]);
+    });
+
+    $app->post("/recipients/{idRecipient}", function($req, $res, $args){
+        User::verifyLogin();
+        $idRecipient = $args["idRecipient"];
+        $recipient = new Recipient();
+        $recipient->setData($_POST);
+        $recipient->update((int)$idRecipient);
+        header("Location: /recipients");
+ 	    exit;
+
     });
 
     $app->get("/recipients/{idRecipient}/delete", function($req, $res, $args){
