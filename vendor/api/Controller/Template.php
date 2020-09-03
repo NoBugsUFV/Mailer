@@ -9,7 +9,7 @@ class Template extends Model{
     
     public static function listAll(){
         $sql = new Sql();
-        return $sql->select("SELECT * FROM templates ORDER BY idTemplates");
+        return $sql->select("SELECT * FROM templates ORDER BY idTemplate");
     }
 
     public static function checkList($templates){
@@ -33,10 +33,13 @@ class Template extends Model{
     public function save(){
         $sql = new Sql();
 
-        $sql->query("INSERT INTO templates (nameTemplate, pathTemplate, typeTemplate) values ( :name, :path, :type)", [
-            ':name'=>$this->getnameTemplate(),
-            ':path'=> $this->getpathTemplate(),
-            ':type'=> $this->gettypeTemplate()
+        $path = "teste/teste";
+        $type = "html";
+
+        $sql->query("INSERT INTO templates (nameTemplate, pathTemplate, typeTemplate) values ( :nome, :caminho, :tipo)", [
+            ':nome'=>$this->getnameTemplate(),
+            ':caminho'=> $path,
+            ':tipo'=> $type
         ]); 
         $this->setData();
     }

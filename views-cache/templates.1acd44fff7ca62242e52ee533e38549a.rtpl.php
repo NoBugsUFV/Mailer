@@ -8,47 +8,13 @@
             </a>
         </div>
         <div class="templatesGrid">
-
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Janeiro</h6>
+            <?php $counter1=-1;  if( isset($templates) && ( is_array($templates) || $templates instanceof Traversable ) && sizeof($templates) ) foreach( $templates as $key1 => $value1 ){ $counter1++; ?>
+            <a href="/templates/<?php echo htmlspecialchars( $value1["idTemplate"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                <div class="template">
+                    <h6 class="templateText"><?php echo htmlspecialchars( $value1["nameTemplate"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h6>
                 </div>
             </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Fevereiro</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Março</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Abril</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Maio</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Junho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Julho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Agosto</h6>
-                </div>
-            </a>
+            <?php } ?>
         </div>
     </div>
     

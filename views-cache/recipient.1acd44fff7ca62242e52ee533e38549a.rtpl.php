@@ -9,7 +9,7 @@
             </div>
             <div class="recipientField">
                 <label for="email"><h6 class="recipientLabel">Email:</h6></label>
-                <input type="text" name="emailRecipient" class="recipientInput" placeholder="Ex: fulano@email.com" value="<?php echo htmlspecialchars( $recipient["emailRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required>
+                <input type="email" name="emailRecipient" class="recipientInput" placeholder="Ex: fulano@email.com" value="<?php echo htmlspecialchars( $recipient["emailRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required>
             </div>
             <div class="recipientField">
                 <label for="tag"><h6 class="recipientLabel">Tag:</h6></label>

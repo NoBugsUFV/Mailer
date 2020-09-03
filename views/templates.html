@@ -8,47 +8,13 @@
             </a>
         </div>
         <div class="templatesGrid">
-
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Janeiro</h6>
+            {loop="$templates"}
+            <a href="/templates/{$value.idTemplate}">
+                <div class="template">
+                    <h6 class="templateText">{$value.nameTemplate}</h6>
                 </div>
             </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Fevereiro</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Março</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Abril</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Maio</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Junho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Julho</h6>
-                </div>
-            </a>
-            <a href="#">
-                <div class="template" href="/templates/:id">
-                    <h6 class="templateText">Newsletter Agosto</h6>
-                </div>
-            </a>
+            {/loop}
         </div>
     </div>
     

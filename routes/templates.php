@@ -6,14 +6,16 @@
 
     $app->get('/', function () {
         User::verifyLogin();
+        $templates = Template::listAll();
         $page = new Page();
-        $page->setTpl('templates');
+        $page->setTpl('templates', ['templates'=>Template::checkList($templates)]);
     });
 
     $app->get('/templates', function () {
         User::verifyLogin();
+        $templates = Template::listAll();
         $page = new Page();
-        $page->setTpl('templates');
+        $page->setTpl('templates', ['templates'=>Template::checkList($templates)]);
     });
 
     $app->get('/templates/new', function () {
@@ -21,6 +23,7 @@
         $page = new Page();
         $page->setTpl('uploadFile');
     });
+
     $app->post('/templates/new', function(){
         User::verifyLogin();
         $template = new Template();
@@ -52,6 +55,24 @@
 
     });
 
+    //Não sei o que estou fazendo aqui
+    $app->get("/templates/{idTemplate}/send", function($req, $res, $args){
+        User::verifyLogin();
+        $idTemplate = $args["idTemplate"];
+        $template = new Template();
+        $template->getById((int)$idTemplate);
+        $page = new Page();
+        $page->setTpl("template-send", [
+            'template'=>$template->getValues()
+        ]);
+
+    });
+
+    $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
+        //Fazer aqui ainda
+    });
+
+    //Não sei se isso funciona
     $app->get("/templates/{idTemplate}/delete", function($req, $res, $args){
         $idTemplate = $args["idTemplate"];
         User::verifyLogin();
