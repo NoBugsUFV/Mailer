@@ -56,6 +56,7 @@
     });
 
     //Não sei o que estou fazendo aqui
+    //Isso só n funciona e é isso
     $app->get("/templates/{idTemplate}/send", function($req, $res, $args){
         User::verifyLogin();
         $idTemplate = $args["idTemplate"];
@@ -65,7 +66,6 @@
         $page->setTpl("template-send", [
             'template'=>$template->getValues()
         ]);
-
     });
 
     $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
