@@ -479,3 +479,40 @@
     .fileLabel:hover{
         background-color:#00518a;
     }
+
+    /* ---------------------------------------------------------------------- */
+
+    .sendBlueTitle{
+        color: #0075c9;
+        font-family: Gotham;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 40px;
+        margin-top: 80px;
+    }
+
+    .templateSend{
+        width: 700px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 50px;
+        margin-bottom: 100px;  
+    }
+
+    .sendButton{
+        background-color: #0075c9;
+        width: 160px;
+        height: 50px;
+        border-radius: 5px;
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+
+        color: white;
+        font-weight: 700;
+        border: none;
+    }

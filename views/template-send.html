@@ -1,7 +1,17 @@
 <div class="templateSendContent">
-    <form action="#" class="templateSend" method="post">
-        {loop="$recipients"}
-        <input type="checkbox" name="recipient" class="recipient">
-        {/loop}
+    <h2 class="sendBlueTitle">Enviar template {$template.nameTemplate} para:</h2>
+    <form action="/templates/{$template.idTemplate}/send" class="templateSend" method="post">
+        <div class="recipients-send">
+            {loop="$recipients"}
+            <div class="recipient">
+                <input type="checkbox">
+                <input type="hidden" name="idRecipient" value="/templates/{idTemplate}"/>
+                <h6 class="recipientName">{$value.nameRecipient}</h6>
+                <h6 class="recipientEmail">{$value.emailRecipient}</h6>
+                <h6 class="recipientTag">{$value.tagRecipient}</h6>
+            </div>
+            {/loop}
+            <button class="sendButton">Enviar</button>
+        </div>
     </form>
 </div>

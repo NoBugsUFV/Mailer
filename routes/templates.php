@@ -3,6 +3,7 @@
     use \Api\Page;
     use Api\Controller\User;
     use Api\Controller\Template;
+    use Api\Controller\Recipient;
 
     $app->get('/', function () {
         User::verifyLogin();
@@ -60,17 +61,21 @@
     $app->get("/templates/{idTemplate}/send", function($req, $res, $args){
         User::verifyLogin();
         $idTemplate = $args["idTemplate"];
+
+        $recipients = Recipient::listAll();
+
         $template = new Template();
         $template->getById((int)$idTemplate);
         $page = new Page();
-        $page->setTpl("template-send", [
+        $page->setTpl('template-send', [
+            'recipients'=>$recipients,
             'template'=>$template->getValues()
         ]);
     });
 
-    $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
+    /* $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
         //Fazer aqui ainda
-    });
+    }); */
 
     //Não sei se isso funciona
     $app->get("/templates/{idTemplate}/delete", function($req, $res, $args){
