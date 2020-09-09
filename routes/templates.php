@@ -56,8 +56,7 @@
 
     });
 
-    //Não sei o que estou fazendo aqui
-    //Isso só n funciona e é isso
+    //Funcionou!
     $app->get("/templates/{idTemplate}/send", function($req, $res, $args){
         User::verifyLogin();
         $idTemplate = $args["idTemplate"];
@@ -73,9 +72,9 @@
         ]);
     });
 
-    /* $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
-        //Fazer aqui ainda
-    }); */
+    $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
+        echo "Tá aqui!";
+    });
 
     //Não sei se isso funciona
     $app->get("/templates/{idTemplate}/delete", function($req, $res, $args){

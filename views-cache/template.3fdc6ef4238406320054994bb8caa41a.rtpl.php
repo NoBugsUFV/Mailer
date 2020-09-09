@@ -12,4 +12,3 @@
         </a>
     </div>
 </div>
-<link rel="stylesheet" href="../res/css/style.css">

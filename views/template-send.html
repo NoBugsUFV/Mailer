@@ -4,7 +4,7 @@
         <div class="recipients-send">
             {loop="$recipients"}
             <div class="recipient">
-                <input type="checkbox">
+                <input name="checkbox" type="checkbox" value="{$value.emailRecipient}">
                 <input type="hidden" name="idRecipient" value="/templates/{idTemplate}"/>
                 <h6 class="recipientName">{$value.nameRecipient}</h6>
                 <h6 class="recipientEmail">{$value.emailRecipient}</h6>
