@@ -73,7 +73,7 @@
     });
 
     $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
-        echo "Tá aqui!";
+        var_dump($_POST);
     });
 
     //Não sei se isso funciona

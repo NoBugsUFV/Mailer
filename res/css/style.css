@@ -297,7 +297,7 @@
         
     }
     .recipient{
-        width: 100%;
+        width: 90%;
         height: 60px;
         margin-bottom: 15px;
         display: flex;
@@ -498,7 +498,7 @@
         margin-right: auto;
 
         margin-top: 50px;
-        margin-bottom: 100px;  
+        margin-bottom: 100px;
     }
 
     .sendButton{
@@ -515,4 +515,28 @@
         color: white;
         font-weight: 700;
         border: none;
+    }
+
+    .emailOption{
+        width: 100%;
+    }
+    .sendField{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+        justify-self: center;
+    }
+    .sendContainer{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sendInput{
+        width: 97%;
+        height: 40px;
+        border: solid 1.5px #0075c9;
+        border-radius: 6px;
+        padding-left: 15px;
     }
