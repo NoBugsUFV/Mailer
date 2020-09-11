@@ -3,6 +3,9 @@
     namespace Api;
 
     use Rain\Tpl;
+    use Api\Controller\Sender;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
 
     class Mailer{
 
@@ -10,7 +13,14 @@
         private $password;
         private $mail;
 
-        public function __construct($toAddress, $toName, $nameFrom, $subject, $tplName, $data = []){
+        public function __construct(Sender $sender, $data=[]){
+
+            $toAddress = $sender->getToAddress();
+            $toName = $sender->getToName();
+            $nameFrom = $sender->getNameFrom();
+            $emailReply = $sender->getEmailReply();
+            $template = $sender->getTemplate();
+            $subject = $sender->getSubject();
 
             $this->username = getenv("USERNAME");
             $this->password = getenv("PASSWORD");
@@ -28,9 +38,9 @@
                 $tpl->assign($key, $value);
             }
 
-            $html = $tpl->draw($tplName, true);
+            $html = $tpl->draw($template, true);
 
-            $this->mail = new \PHPMailer;
+            $this->mail = new PHPMailer();
             $this->mail->isSMTP();
             $this->mail->SMTPDebug = 0;
             $this->mail->Host = 'smtp.gmail.com';

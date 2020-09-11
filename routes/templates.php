@@ -4,6 +4,7 @@
     use Api\Controller\User;
     use Api\Controller\Template;
     use Api\Controller\Recipient;
+    use Api\Controller\Sender;
 
     $app->get('/', function () {
         User::verifyLogin();
@@ -73,7 +74,17 @@
     });
 
     $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
-        var_dump($_POST);
+
+        $toAddress = $_POST["radio"];
+        $toName = $_POST["radio"];
+        $nameFrom = $_POST["nameFrom"];
+        $emailReply = "comunicacao@nobugs.com.br";
+        $template = $_POST["nameTemplate"];
+        $subject = $_POST["subject"];
+        $sender = new Sender($toAddress, $toName, $nameFrom, $emailReply, $template, $subject);
+        $sender->sendMail();
+        header("Location: /");
+        exit;
     });
 
     //Não sei se isso funciona
