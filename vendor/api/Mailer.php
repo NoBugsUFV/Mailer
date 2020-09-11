@@ -8,10 +8,9 @@
 
         private $username;
         private $password;
-        private $nameFrom;
         private $mail;
 
-        public function __construct($toAddress, $toName, $subject, $tplName, $data = []){
+        public function __construct($toAddress, $toName, $nameFrom, $subject, $tplName, $data = []){
 
             $this->username = getenv("USERNAME");
             $this->password = getenv("PASSWORD");
@@ -49,7 +48,7 @@
             $this->mail->SMTPAuth = true;
             $this->mail->Username = $this->username;
             $this->mail->Password = $this->password;
-            $this->mail->setFrom($this->username, $this->nameFrom);
+            $this->mail->setFrom($this->username, $nameFrom);
             $this->mail->addReplyTo('comunicacao@nobugs.com.br', 'Marketing No Bugs');
             $this->mail->addAddress($toAddress, $toName);
             $this->mail->Subject = $subject;
@@ -57,6 +56,7 @@
             $this->mail->AltBody = 'Mensagem alternativa';
             //$this->mail->addAttachment('images/phpmailer_mini.png');
         }
+        
         public function send(){
             return $this->mail->send();
         }
