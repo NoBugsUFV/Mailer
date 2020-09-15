@@ -3,6 +3,7 @@
 
     require_once "vendor/autoload.php";
     require_once "config/config.php";
+    require_once "./env.php";
     
     use\Slim\App;
     use Api\Page;
@@ -10,7 +11,6 @@
 
     $app = new App($c);
 
-    require_once "utils/functions.php";
     require_once "routes/login.php";
     require_once "routes/templates.php";
     require_once "routes/recipients.php";

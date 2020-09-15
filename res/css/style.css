@@ -487,8 +487,9 @@
         font-family: Gotham;
         text-align: center;
         font-size: 24px;
-        margin-bottom: 40px;
-        margin-top: 80px;
+        margin-bottom: 5px;
+
+        margin-top: 50px;
     }
 
     .templateSend{
@@ -524,7 +525,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 20px;
         justify-self: center;
     }
     .sendContainer{
@@ -533,10 +533,24 @@
         margin-right: auto;
     }
 
+    .sendLabel{
+        font-family: Gotham;
+        font-size: medium;
+        margin-bottom: 3px;
+        margin-left: 3px;
+        margin-top: auto;
+    }
     .sendInput{
         width: 97%;
         height: 40px;
         border: solid 1.5px #0075c9;
         border-radius: 6px;
         padding-left: 15px;
+    }
+
+    .sendBlueTitle:last-of-type{
+        margin-bottom: 30px;
+    }
+    .sendBlueTitle:first-of-type{
+        margin-bottom: 5px;
     }
