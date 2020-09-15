@@ -17,7 +17,7 @@
                     <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                         <img src="../../res/assets/img/settings.svg" alt="config">
                     </a>
-                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete">
+                    <a href="/recipients/<?php echo htmlspecialchars( $value1["idRecipient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este endereço?')">
                         <img src="../../res/assets/img/lixo.png" alt="delete" id="deleteIcon">
                     </a>
                 </div>

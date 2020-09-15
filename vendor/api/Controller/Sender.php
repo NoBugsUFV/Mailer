@@ -2,7 +2,6 @@
 
 namespace Api\Controller;
 
-use Api\Controller\Template;
 use Api\Mailer;
 
 class Sender{

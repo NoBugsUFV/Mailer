@@ -74,7 +74,7 @@
     });
 
     $app->post("/templates/{idTemplate}/send", function($req, $res, $args){
-
+        User::verifyLogin();
         $toAddress = $_POST["radio"];
         $toName = $_POST["radio"];
         $nameFrom = $_POST["nameFrom"];
