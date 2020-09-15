@@ -17,6 +17,6 @@ CREATE TABLE recipients(
 CREATE TABLE templates(
     idTemplate INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nameTemplate VARCHAR(35) NOT NULL,
-    pathTemplate VARCHAR(100) NOTNULL,
-    typeTemplate VARCHAR(5)NOTNULL
+    pathTemplate VARCHAR(100) NOT NULL,
+    typeTemplate VARCHAR(5)NOT NULL
 );
