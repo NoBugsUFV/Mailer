@@ -30,6 +30,7 @@
         User::verifyLogin();
         $template = new Template();
         $template->setData($_POST);
+        $template->upload($_FILES["file"]);
         $template->save();
         header("Location: /templates");
  	    exit;

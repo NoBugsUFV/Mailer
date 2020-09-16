@@ -26,7 +26,7 @@
             $this->password = getenv("PASSWORD");
 
             $config = array(
-                "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/email/",
+                "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/res/templates/",
                 "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
                 "debug"         => false // set to false to improve the speed
             );
